@@ -1,0 +1,36 @@
+### GET ALL MOVIES
+GET http://localhost:1234/movies
+
+### GET ONE MOVIE FOR ID
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### GET ALL MOVIES FOR A GENDER
+GET http://localhost:1234/movies?genre=Crime
+
+### CREATE ONE MOVIE
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The GodFather",
+    "year": 1975,
+    "director": "Francis Ford Coppola",
+    "duration": 175,
+    "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+    "genre": [
+        "Crime",
+        "Drama"
+    ],
+    "rate": 8.6
+}
+
+### DELETE MOVIE
+DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### UPDATE MOVIE
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1993
+}
